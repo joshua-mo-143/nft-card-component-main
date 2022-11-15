@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+// ### Primary
+@soft-blue: hsl(215, 51%, 70%);
+@cyan: hsl(178, 100%, 50%);
+
+// ### Neutral
+
+@main-bg: hsl(217, 54%, 11%);
+@card-bg: hsl(216, 50%, 16%);
+@divider: hsl(215, 32%, 27%);
+@white: hsl(0, 0%, 100%);
+
+
+// CSS Resets
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: @main-bg;
+    font-family: 'Outfit', 'sans-serif';
+    box-sizing: border-box;
+}
+
+// card
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cardContainer {
+    display: grid;
+    grid: .7fr .8fr auto / 1fr;
+    background-color: @card-bg;
+    border-radius: 1rem;
+    height: 32rem;
+    align-items: center;
+    width: 80%;
+
+    @media screen and (min-width: 400px) and (min-height: 900px) {
+        width: 60%;
+    }
+
+    @media screen and (min-width: 500px) {
+        width: 50%;
+    }
+
+    @media screen and (min-width: 700px) {
+        width: 40%;
+    }
+
+    @media screen and (min-width: 900px) {
+        width: 20%;
+    }
+
+    @media screen and (min-width: 1024px) and (max-height: 600px) {
+        width: 25%;
+    }
+
+    
+    @media screen and (min-width: 1000px) and (min-height: 601px) {
+        width: 20%;
+    }
+
+    .cardImg {
+        object-fit: cover;
+        border-radius: 1rem;
+        margin: auto;
+        width: 90%;
+        height: 15rem;
+        padding: .7rem;
+        margin-top: .75rem;
+
+    }
+    .cardTextContainer {
+        .cardTitle, .cardDescription{
+            padding: 0 2rem;
+            
+        }
+    
+        .cardTitle {
+            color: @white;
+            font-size: 1.3em;
+            font-weight: 600;
+            &:hover {
+                color: @cyan;
+            }
+            
+        }
+    
+        .cardDescription {
+            color: @soft-blue;
+            font-size: .9em;
+            line-height: 1.8;
+            padding: .5rem 2rem;
+            
+        }
+    
+        .cardDataContainer {
+            display: flex;
+            flex-direction: column;
+            padding: 0 2rem;
+            margin-bottom: -1rem;
+            gap: 1rem;
+    
+            hr {
+                background-color: @divider;
+                height: 1px;
+                border: none;
+            }
+    
+            .cardStoreDataContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+    
+            .cardPrice, .cardExpire {
+                display: flex;
+                flex-direction: row;
+                gap: .5rem;
+            }
+    
+            .cardPrice {
+                color: @cyan;
+
+                img {
+                    object-fit: scale-down;
+                }
+            }
+    
+            .cardExpire {
+                color: @soft-blue;
+                font-weight: 300;
+                img {
+                    object-fit: scale-down;
+                }
+            }
+        }
+            .cardCreator {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+    
+                img {
+                    object-fit: cover;
+                    border: 1px solid @white;
+                    border-radius: 100%;
+                }
+    
+                p {
+                    color: @soft-blue;
+                    font-size: .9rem;
+                    
+                    span {
+                        color: @white;
+                        &:hover {
+                            color: @cyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

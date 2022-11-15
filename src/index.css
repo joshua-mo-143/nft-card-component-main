@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/outfit/v6/QGYyz_MVcBeNP4NjuGObqx1XmO1I4W61C4E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/outfit/v6/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/outfit/v6/QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yC4E.ttf) format('truetype');
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: hsl(217, 54%, 11%);
+  font-family: 'Outfit', 'sans-serif';
+  box-sizing: border-box;
+}
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.cardContainer {
+  display: grid;
+  grid: 0.7fr 0.8fr auto / 1fr;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 1rem;
+  height: 32rem;
+  align-items: center;
+  width: 80%;
+}
+@media screen and (min-width: 400px) and (min-height: 900px) {
+  .cardContainer {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .cardContainer {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .cardContainer {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .cardContainer {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-height: 600px) {
+  .cardContainer {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1000px) and (min-height: 601px) {
+  .cardContainer {
+    width: 20%;
+  }
+}
+.cardContainer .cardImg {
+  object-fit: cover;
+  border-radius: 1rem;
+  margin: auto;
+  width: 90%;
+  height: 15rem;
+  padding: 0.7rem;
+  margin-top: 0.75rem;
+}
+.cardContainer .cardTextContainer .cardTitle,
+.cardContainer .cardTextContainer .cardDescription {
+  padding: 0 2rem;
+}
+.cardContainer .cardTextContainer .cardTitle {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.cardContainer .cardTextContainer .cardTitle:hover {
+  color: hsl(178, 100%, 50%);
+}
+.cardContainer .cardTextContainer .cardDescription {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.9em;
+  line-height: 1.8;
+  padding: 0.5rem 2rem;
+}
+.cardContainer .cardTextContainer .cardDataContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin-bottom: -1rem;
+  gap: 1rem;
+}
+.cardContainer .cardTextContainer .cardDataContainer hr {
+  background-color: hsl(215, 32%, 27%);
+  height: 1px;
+  border: none;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer .cardPrice,
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer .cardExpire {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer .cardPrice {
+  color: hsl(178, 100%, 50%);
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer .cardPrice img {
+  object-fit: scale-down;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer .cardExpire {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardStoreDataContainer .cardExpire img {
+  object-fit: scale-down;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardCreator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardCreator img {
+  object-fit: cover;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 100%;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardCreator p {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.9rem;
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardCreator p span {
+  color: hsl(0, 0%, 100%);
+}
+.cardContainer .cardTextContainer .cardDataContainer .cardCreator p span:hover {
+  color: hsl(178, 100%, 50%);
+}
